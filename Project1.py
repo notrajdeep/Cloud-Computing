@@ -1,14 +1,6 @@
-class Solution:
-  def jump(self, nums: List[int]) -> int:
-    ans = 0
-    end = 0
-    farthest = 0
-    for i in range(len(nums) - 1):
-      farthest = max(farthest, i + nums[i])
-      if farthest >= len(nums) - 1:
-        ans += 1
-        break
-      if i == end:      
-        ans += 1        
-        end = farthest  
-    return ans
+import string    
+import random # define the random module  
+S = 10  # number of characters in the string.  
+# call random.choices() string module to find the string in Uppercase + numeric data.  
+ran = ''.join(random.choices(string.ascii_uppercase + string.digits, k = S))    
+print("The randomly generated string is : " + str(ran)) # print the random data
